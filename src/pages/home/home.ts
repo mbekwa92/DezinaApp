@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {Http} from "@angular/http";
-import "rxjs/add/operator/map"
+import "rxjs/add/operator/map";
+
+import { ProductProvider } from "../../providers/product/product";
 
 @Component({
   selector: 'page-home',
@@ -9,15 +11,13 @@ import "rxjs/add/operator/map"
 })
 export class HomePage {
 
-  constructor(private http:Http, public navCtrl: NavController) {
+  constructor(private productService:ProductProvider  private http:Http, public navCtrl: NavController) {
 
   }
 
-
   ionViewDidLoad(){
-    this.http.get("/assets/data.json")
-    .map(response=>response.json())
-    .subscribe(data=> console.log(data));
+   this.productService.getProducts()
+   .subscribe(response => console.log(response)); 
   }
 
 }
