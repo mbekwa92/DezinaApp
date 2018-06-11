@@ -12,7 +12,7 @@ import { ProductProvider } from "../../providers/product/product";
 export class HomePage {
   public allProducts = [];
 
-  constructor(private productService:ProductProvider,private http:Http, public navCtrl: NavController) {
+  constructor(private productService:ProductProvider,private http: Http, public navCtrl: NavController) {
 
   }
 
