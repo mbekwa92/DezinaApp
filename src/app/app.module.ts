@@ -20,28 +20,30 @@ import {ProductDetailPage} from '../pages/product-detail/product-detail';
     AboutPage,
     ContactPage,
     HomePage,
-    ProductDetailPage,
-    TabsPage
+    TabsPage,
+    ProductDetailPage
   ],
+
   imports: [
     HttpModule,
     BrowserModule,
     IonicModule.forRoot(MyApp)
   ],
+
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    ProductDetailPage,
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    ProductDetailPage
   ],
   providers: [
-    ProductProvider,    
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ProductProvider
   ]
 })
 export class AppModule {}
