@@ -34,10 +34,10 @@ import { ProductProvider } from '../providers/product/product';
     TabsPage
   ],
   providers: [
+    ProductProvider,    
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ProductProvider
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}
